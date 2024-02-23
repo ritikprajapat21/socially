@@ -1,0 +1,22 @@
+{% extends "main.html" %} {% block content %}
+<div class="flex justify-center items-center flex-col gap-4">
+  <h1 class="text-xl">Create Post</h1>
+  <form method="post" class="flex items-center flex-col gap-2 w-1/2">
+    {% csrf_token %} {% for field in form %}
+    <div>
+      <textarea
+        placeholder="Enter content of your post"
+        name="content"
+        rows="6"
+        cols="30"
+        class="textarea textarea-bordered textarea-lg w-full max-w-xs"
+      ></textarea>
+    </div>
+    {% endfor %}
+    <div class="flex gap-9">
+      <input type="submit" class="btn btn-primary" value="Create" />
+      <a href="{% url 'posts' %}" class="btn btn-primary"> Cancel </a>
+    </div>
+  </form>
+  <div>{% endblock content %}</div>
+</div>

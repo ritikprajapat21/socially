@@ -1,0 +1,29 @@
+{% extends "main.html" %} {% block content %}
+
+<div class="flex justify-center items-center flex-col gap-4">
+  <h1 class="text-xl">Register</h1>
+  <form method="post" class="flex items-center flex-col gap-2 w-1/2">
+    {% csrf_token %} {% for field in form %}
+
+    <label class="input input-bordered flex items-center w-max gap-2">
+      {{field.label}} {{field}}
+    </label>
+    {% endfor %}
+
+    <button class="btn btn-primary" type="submit">Register</button>
+  </form>
+
+  <div>
+    Already registered?
+    <a class="link link-primary" href="{% url 'login' %}">Login</a> here.
+  </div>
+</div>
+
+<div>
+  {% for message in messages %}
+
+  <p>{{message}}</p>
+
+  {% endfor %}
+</div>
+{% endblock content %}
