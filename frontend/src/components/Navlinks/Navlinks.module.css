@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+a {
+  transition: all 0.3s;
+}
+
+.container a:hover {
+  background-color: #abb0b9;
+  padding: 0.5em;
+  transform: scale(1.1);
+  color: #00089b;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.container a.active {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 25px 0px 0px 25px;
+}

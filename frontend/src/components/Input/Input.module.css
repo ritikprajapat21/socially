@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container input {
+  background-color: transparent;
+  border: none;
+  width: 70%;
+  border-bottom: 1px solid;
+  border-radius: 7px;
+  padding: 0.5em;
+  outline: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.container input:hover,
+.container input:focus,
+.container input:focus-within {
+  border-right: 1px solid;
+  border-top: 1px solid;
+  width: 100%;
+  padding: 0.9em;
+  border-left: 1px solid;
+  border-radius: 18px;
+  border-color: #646cff;
+}

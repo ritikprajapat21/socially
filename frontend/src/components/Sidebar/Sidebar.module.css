@@ -1,0 +1,10 @@
+.container {
+  margin: 0;
+  padding-left: 0.2em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #5f676f;
+  height: 100%;
+}

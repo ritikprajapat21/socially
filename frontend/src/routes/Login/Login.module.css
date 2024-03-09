@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  width: 28%;
+}
+
+@media (max-width: 425px) {
+  .form {
+    width: 70%;
+  }
+}
